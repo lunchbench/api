@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benches",
+  "info": {
+    "name": "Bench",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Bench",
+        "Spot",
+        "Area"
+      ],
+      "required": true
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "spiffing",
+        "okay",
+        "appalling"
+      ],
+      "required": true
+    },
+    "capacity": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    }
+  }
+}
