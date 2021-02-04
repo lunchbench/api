@@ -58,6 +58,10 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "bench": {
+      "via": "users_who_edited",
+      "model": "bench"
     }
   }
 }
