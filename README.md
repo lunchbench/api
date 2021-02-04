@@ -1,3 +1,7 @@
-# Strapi application
+# Lunchbencher API
 
-A quick description of your strapi application
+Built with [Strapi](https://strapi.io)
+
+## License
+
+&copy; 2021 Calorific, All Rights Reserved

@@ -50,6 +50,10 @@
       "type": "integer",
       "min": 1,
       "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
     }
   }
 }

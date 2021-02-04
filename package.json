@@ -2,7 +2,7 @@
   "name": "lb-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Strapi API for Lunchbencher",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -33,5 +33,5 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "Calorific"
 }
