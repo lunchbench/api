@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/04/2021 9:47:55 AM"
+    "x-generation-date": "02/06/2021 12:29:34 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2768,57 +2768,6 @@
           "location": {
             "type": "string"
           },
-          "users_who_edited": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmationToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "bench": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -2861,12 +2810,6 @@
           },
           "location": {
             "type": "string"
-          },
-          "users_who_edited": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -2977,9 +2920,6 @@
                   "type": "boolean"
                 },
                 "role": {
-                  "type": "string"
-                },
-                "bench": {
                   "type": "string"
                 },
                 "created_by": {
@@ -3094,60 +3034,6 @@
                 "type": "string"
               }
             }
-          },
-          "bench": {
-            "required": [
-              "id",
-              "title",
-              "category",
-              "condition",
-              "capacity",
-              "location"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "string"
-              },
-              "condition": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "integer"
-              },
-              "location": {
-                "type": "string"
-              },
-              "users_who_edited": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           }
         }
       },
@@ -3188,9 +3074,6 @@
             "default": false
           },
           "role": {
-            "type": "string"
-          },
-          "bench": {
             "type": "string"
           },
           "created_by": {

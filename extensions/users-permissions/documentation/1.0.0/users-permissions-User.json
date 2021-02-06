@@ -1250,60 +1250,6 @@
                 "type": "string"
               }
             }
-          },
-          "bench": {
-            "required": [
-              "id",
-              "title",
-              "category",
-              "condition",
-              "capacity",
-              "location"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "string"
-              },
-              "condition": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "integer"
-              },
-              "location": {
-                "type": "string"
-              },
-              "users_who_edited": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           }
         }
       },
@@ -1344,9 +1290,6 @@
             "default": false
           },
           "role": {
-            "type": "string"
-          },
-          "bench": {
             "type": "string"
           },
           "created_by": {

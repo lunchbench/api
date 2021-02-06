@@ -561,9 +561,6 @@
                 "role": {
                   "type": "string"
                 },
-                "bench": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },

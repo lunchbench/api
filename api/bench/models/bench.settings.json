@@ -54,11 +54,6 @@
     "location": {
       "type": "string",
       "required": true
-    },
-    "users_who_edited": {
-      "plugin": "users-permissions",
-      "collection": "user",
-      "via": "bench"
     }
   }
 }
