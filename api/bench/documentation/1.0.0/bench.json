@@ -521,7 +521,8 @@
           "category",
           "condition",
           "capacity",
-          "location"
+          "location",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -625,6 +626,9 @@
           "location": {
             "type": "string"
           },
+          "slug": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -637,7 +641,8 @@
           "category",
           "condition",
           "capacity",
-          "location"
+          "location",
+          "slug"
         ],
         "properties": {
           "title": {
@@ -666,6 +671,9 @@
             "type": "integer"
           },
           "location": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "published_at": {
