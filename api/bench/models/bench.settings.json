@@ -14,19 +14,11 @@
     "title": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "description": {
-      "type": "text"
-    },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
+      "type": "text",
+      "default": "A lovely bench in a nice location, looking over the nice location"
     },
     "category": {
       "type": "enumeration",
