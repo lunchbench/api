@@ -1,4 +1,4 @@
-# Lunchbencher API
+# Lunchbench API
 
 Built with [Strapi](https://strapi.io)
 
