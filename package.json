@@ -16,6 +16,7 @@
     "strapi": "3.5.0",
     "strapi-admin": "3.5.0",
     "strapi-connector-bookshelf": "3.5.0",
+    "strapi-hook-algolia": "^3.4.0",
     "strapi-plugin-content-manager": "3.5.0",
     "strapi-plugin-content-type-builder": "3.5.0",
     "strapi-plugin-documentation": "3.5.0",
