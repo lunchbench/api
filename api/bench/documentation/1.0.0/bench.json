@@ -559,6 +559,9 @@
           },
           "slug": {
             "type": "string"
+          },
+          "coords": {
+            "type": "string"
           }
         }
       },
@@ -602,6 +605,9 @@
             "type": "string"
           },
           "slug": {
+            "type": "string"
+          },
+          "coords": {
             "type": "string"
           },
           "created_by": {

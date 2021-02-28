@@ -51,6 +51,11 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "coords": {
+      "type": "string",
+      "required": false,
+      "unique": false
     }
   }
 }
