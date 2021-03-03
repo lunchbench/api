@@ -561,7 +561,21 @@
             "type": "string"
           },
           "coords": {
-            "type": "string"
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lng": {
+                "type": "number"
+              }
+            }
           }
         }
       },
@@ -608,7 +622,21 @@
             "type": "string"
           },
           "coords": {
-            "type": "string"
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lng": {
+                "type": "number"
+              }
+            }
           },
           "created_by": {
             "type": "string"

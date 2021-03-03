@@ -53,9 +53,9 @@
       "unique": true
     },
     "coords": {
-      "type": "string",
-      "required": false,
-      "unique": false
+      "type": "component",
+      "repeatable": false,
+      "component": "coords.coords"
     }
   }
 }
