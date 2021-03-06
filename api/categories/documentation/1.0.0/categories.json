@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/benches": {
+    "/categories": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the categories's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve categories document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Bench"
+                    "$ref": "#/components/schemas/Categories"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new categories record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve categories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Categories"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBench"
+                "$ref": "#/components/schemas/NewCategories"
               }
             }
           }
         }
       }
     },
-    "/benches/count": {
+    "/categories/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of categories documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve categories document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "parameters": []
       }
     },
-    "/benches/{id}": {
+    "/categories/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one categories record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve categories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Categories"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single categories record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve categories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Categories"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBench"
+                "$ref": "#/components/schemas/NewCategories"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single categories record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single categories based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Categories"
         ],
         "parameters": [
           {
@@ -514,151 +514,80 @@
   },
   "components": {
     "schemas": {
-      "Bench": {
+      "Categories": {
         "required": [
           "id",
-          "title",
-          "capacity",
-          "location",
-          "slug"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string",
-            "default": "A lovely bench in a nice location, looking over the nice location"
-          },
-          "capacity": {
-            "type": "integer"
-          },
-          "location": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
+          "benches": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "capacity",
+                "location",
+                "slug"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "coords": {
+                  "type": "component"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "condition": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "condition": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
         }
       },
-      "NewBench": {
+      "NewCategories": {
         "required": [
-          "title",
-          "capacity",
-          "location",
-          "slug"
+          "name"
         ],
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string",
-            "default": "A lovely bench in a nice location, looking over the nice location"
-          },
-          "capacity": {
-            "type": "integer"
-          },
-          "location": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
+          "benches": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
-          },
-          "category": {
-            "type": "string"
-          },
-          "condition": {
-            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -672,7 +601,7 @@
   },
   "tags": [
     {
-      "name": "Bench"
+      "name": "Categories"
     }
   ]
 }

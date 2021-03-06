@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conditions",
+  "info": {
+    "name": "Condition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "benches": {
+      "via": "condition",
+      "collection": "bench"
+    }
+  }
+}

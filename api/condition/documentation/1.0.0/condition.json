@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/benches": {
+    "/conditions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Bench"
+                    "$ref": "#/components/schemas/Condition"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Condition"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBench"
+                "$ref": "#/components/schemas/NewCondition"
               }
             }
           }
         }
       }
     },
-    "/benches/count": {
+    "/conditions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "parameters": []
       }
     },
-    "/benches/{id}": {
+    "/conditions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Condition"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bench"
+                  "$ref": "#/components/schemas/Condition"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBench"
+                "$ref": "#/components/schemas/NewCondition"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Bench"
+          "Condition"
         ],
         "parameters": [
           {
@@ -514,151 +514,80 @@
   },
   "components": {
     "schemas": {
-      "Bench": {
+      "Condition": {
         "required": [
           "id",
-          "title",
-          "capacity",
-          "location",
-          "slug"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string",
-            "default": "A lovely bench in a nice location, looking over the nice location"
-          },
-          "capacity": {
-            "type": "integer"
-          },
-          "location": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
+          "benches": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "capacity",
+                "location",
+                "slug"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "coords": {
+                  "type": "component"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "condition": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "condition": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
         }
       },
-      "NewBench": {
+      "NewCondition": {
         "required": [
-          "title",
-          "capacity",
-          "location",
-          "slug"
+          "name"
         ],
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string",
-            "default": "A lovely bench in a nice location, looking over the nice location"
-          },
-          "capacity": {
-            "type": "integer"
-          },
-          "location": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
+          "benches": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
-          },
-          "category": {
-            "type": "string"
-          },
-          "condition": {
-            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -672,7 +601,7 @@
   },
   "tags": [
     {
-      "name": "Bench"
+      "name": "Condition"
     }
   ]
 }

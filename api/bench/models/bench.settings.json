@@ -20,24 +20,6 @@
       "type": "text",
       "default": "A lovely bench in a nice location, looking over the nice location"
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Bench",
-        "Spot",
-        "Area"
-      ],
-      "required": true
-    },
-    "condition": {
-      "type": "enumeration",
-      "enum": [
-        "spiffing",
-        "okay",
-        "appalling"
-      ],
-      "required": true
-    },
     "capacity": {
       "type": "integer",
       "min": 1,
@@ -56,6 +38,14 @@
       "type": "component",
       "repeatable": false,
       "component": "coords.coords"
+    },
+    "category": {
+      "model": "categories",
+      "via": "benches"
+    },
+    "condition": {
+      "model": "condition",
+      "via": "benches"
     }
   }
 }
