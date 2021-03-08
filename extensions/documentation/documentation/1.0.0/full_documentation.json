@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/06/2021 12:14:22 PM"
+    "x-generation-date": "03/08/2021 7:47:59 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3685,7 +3685,9 @@
           "title",
           "capacity",
           "location",
-          "slug"
+          "slug",
+          "lng",
+          "lat"
         ],
         "properties": {
           "id": {
@@ -3707,23 +3709,6 @@
           "slug": {
             "type": "string"
           },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
-            }
-          },
           "category": {
             "required": [
               "id",
@@ -3775,6 +3760,12 @@
                 "type": "string"
               }
             }
+          },
+          "lng": {
+            "type": "number"
+          },
+          "lat": {
+            "type": "number"
           }
         }
       },
@@ -3783,7 +3774,9 @@
           "title",
           "capacity",
           "location",
-          "slug"
+          "slug",
+          "lng",
+          "lat"
         ],
         "properties": {
           "title": {
@@ -3802,28 +3795,17 @@
           "slug": {
             "type": "string"
           },
-          "coords": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "lng": {
-                "type": "number"
-              }
-            }
-          },
           "category": {
             "type": "string"
           },
           "condition": {
             "type": "string"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "lat": {
+            "type": "number"
           },
           "created_by": {
             "type": "string"
@@ -3853,7 +3835,9 @@
                 "title",
                 "capacity",
                 "location",
-                "slug"
+                "slug",
+                "lng",
+                "lat"
               ],
               "properties": {
                 "id": {
@@ -3874,14 +3858,17 @@
                 "slug": {
                   "type": "string"
                 },
-                "coords": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
                 "condition": {
                   "type": "string"
+                },
+                "lng": {
+                  "type": "number"
+                },
+                "lat": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
@@ -3936,7 +3923,9 @@
                 "title",
                 "capacity",
                 "location",
-                "slug"
+                "slug",
+                "lng",
+                "lat"
               ],
               "properties": {
                 "id": {
@@ -3957,14 +3946,17 @@
                 "slug": {
                   "type": "string"
                 },
-                "coords": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
                 "condition": {
                   "type": "string"
+                },
+                "lng": {
+                  "type": "number"
+                },
+                "lat": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"

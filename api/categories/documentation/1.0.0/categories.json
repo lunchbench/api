@@ -534,7 +534,9 @@
                 "title",
                 "capacity",
                 "location",
-                "slug"
+                "slug",
+                "lng",
+                "lat"
               ],
               "properties": {
                 "id": {
@@ -555,14 +557,17 @@
                 "slug": {
                   "type": "string"
                 },
-                "coords": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
                 "condition": {
                   "type": "string"
+                },
+                "lng": {
+                  "type": "number"
+                },
+                "lat": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
