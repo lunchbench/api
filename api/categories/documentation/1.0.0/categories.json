@@ -533,10 +533,7 @@
                 "id",
                 "title",
                 "capacity",
-                "location",
-                "slug",
-                "lng",
-                "lat"
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -550,9 +547,6 @@
                 },
                 "capacity": {
                   "type": "integer"
-                },
-                "location": {
-                  "type": "string"
                 },
                 "slug": {
                   "type": "string"

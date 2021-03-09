@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/08/2021 7:47:59 PM"
+    "x-generation-date": "03/09/2021 8:54:24 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3684,10 +3684,7 @@
           "id",
           "title",
           "capacity",
-          "location",
-          "slug",
-          "lng",
-          "lat"
+          "slug"
         ],
         "properties": {
           "id": {
@@ -3702,9 +3699,6 @@
           },
           "capacity": {
             "type": "integer"
-          },
-          "location": {
-            "type": "string"
           },
           "slug": {
             "type": "string"
@@ -3773,10 +3767,7 @@
         "required": [
           "title",
           "capacity",
-          "location",
-          "slug",
-          "lng",
-          "lat"
+          "slug"
         ],
         "properties": {
           "title": {
@@ -3788,9 +3779,6 @@
           },
           "capacity": {
             "type": "integer"
-          },
-          "location": {
-            "type": "string"
           },
           "slug": {
             "type": "string"
@@ -3834,10 +3822,7 @@
                 "id",
                 "title",
                 "capacity",
-                "location",
-                "slug",
-                "lng",
-                "lat"
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -3851,9 +3836,6 @@
                 },
                 "capacity": {
                   "type": "integer"
-                },
-                "location": {
-                  "type": "string"
                 },
                 "slug": {
                   "type": "string"
@@ -3922,10 +3904,7 @@
                 "id",
                 "title",
                 "capacity",
-                "location",
-                "slug",
-                "lng",
-                "lat"
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -3939,9 +3918,6 @@
                 },
                 "capacity": {
                   "type": "integer"
-                },
-                "location": {
-                  "type": "string"
                 },
                 "slug": {
                   "type": "string"
