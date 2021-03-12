@@ -540,8 +540,7 @@
           },
           "category": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
@@ -566,8 +565,7 @@
           },
           "condition": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {

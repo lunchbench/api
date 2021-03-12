@@ -13,12 +13,12 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "benches": {
-      "via": "category",
-      "collection": "bench"
+      "collection": "bench",
+      "via": "category"
     }
   }
 }

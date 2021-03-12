@@ -516,8 +516,7 @@
     "schemas": {
       "Condition": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -575,9 +574,6 @@
         }
       },
       "NewCondition": {
-        "required": [
-          "name"
-        ],
         "properties": {
           "name": {
             "type": "string"

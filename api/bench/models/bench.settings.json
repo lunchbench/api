@@ -35,8 +35,8 @@
       "via": "benches"
     },
     "condition": {
-      "model": "condition",
-      "via": "benches"
+      "via": "benches",
+      "model": "condition"
     },
     "lng": {
       "type": "float"
