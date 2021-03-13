@@ -519,7 +519,9 @@
           "id",
           "title",
           "capacity",
-          "slug"
+          "slug",
+          "category",
+          "condition"
         ],
         "properties": {
           "id": {
@@ -538,61 +540,30 @@
           "slug": {
             "type": "string"
           },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "condition": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "benches": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "lng": {
             "type": "number"
           },
           "lat": {
             "type": "number"
+          },
+          "category": {
+            "type": "string",
+            "default": "bench",
+            "enum": [
+              "bench",
+              "spot",
+              "area",
+              "park"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "default": "spiffing",
+            "enum": [
+              "spiffing",
+              "okay",
+              "appalling"
+            ]
           }
         }
       },
@@ -600,7 +571,9 @@
         "required": [
           "title",
           "capacity",
-          "slug"
+          "slug",
+          "category",
+          "condition"
         ],
         "properties": {
           "title": {
@@ -616,17 +589,30 @@
           "slug": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
-          },
-          "condition": {
-            "type": "string"
-          },
           "lng": {
             "type": "number"
           },
           "lat": {
             "type": "number"
+          },
+          "category": {
+            "type": "string",
+            "default": "bench",
+            "enum": [
+              "bench",
+              "spot",
+              "area",
+              "park"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "default": "spiffing",
+            "enum": [
+              "spiffing",
+              "okay",
+              "appalling"
+            ]
           },
           "created_by": {
             "type": "string"

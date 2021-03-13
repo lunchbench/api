@@ -30,19 +30,32 @@
       "required": true,
       "unique": true
     },
-    "category": {
-      "model": "categories",
-      "via": "benches"
-    },
-    "condition": {
-      "via": "benches",
-      "model": "condition"
-    },
     "lng": {
       "type": "float"
     },
     "lat": {
       "type": "float"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "bench",
+        "spot",
+        "area",
+        "park"
+      ],
+      "default": "bench",
+      "required": true
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "spiffing",
+        "okay",
+        "appalling"
+      ],
+      "default": "spiffing",
+      "required": true
     }
   }
 }
