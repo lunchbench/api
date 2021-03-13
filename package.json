@@ -1,8 +1,9 @@
 {
   "name": "api",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "description": "Strapi API for Lunchbench",
+  "license": "MIT",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
