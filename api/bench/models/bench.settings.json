@@ -41,8 +41,7 @@
       "enum": [
         "bench",
         "spot",
-        "area",
-        "park"
+        "area"
       ],
       "default": "bench",
       "required": true

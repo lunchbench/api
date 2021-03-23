@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/lunchbench/api/blob/main/LICENSE"
     },
-    "x-generation-date": "03/13/2021 1:12:36 PM"
+    "x-generation-date": "03/23/2021 7:43:55 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -598,8 +598,7 @@
             "enum": [
               "bench",
               "spot",
-              "area",
-              "park"
+              "area"
             ]
           },
           "condition": {
@@ -647,8 +646,7 @@
             "enum": [
               "bench",
               "spot",
-              "area",
-              "park"
+              "area"
             ]
           },
           "condition": {

@@ -552,8 +552,7 @@
             "enum": [
               "bench",
               "spot",
-              "area",
-              "park"
+              "area"
             ]
           },
           "condition": {
@@ -601,8 +600,7 @@
             "enum": [
               "bench",
               "spot",
-              "area",
-              "park"
+              "area"
             ]
           },
           "condition": {
