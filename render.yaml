@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: strapi
+    name: lunchbenchapi
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
@@ -25,5 +25,5 @@ services:
         generateValue: true
 
 databases:
-  - name: strapi
+  - name: lunchbenchdb
     plan: starter
